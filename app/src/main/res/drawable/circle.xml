@@ -1,0 +1,21 @@
+<!-- res/drawable/circle_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/upper_buttons.pressed" />
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/upper_buttons" />
+            <size
+                android:width="72dp"
+                android:height="72dp"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="upper_buttons">#9f9f9f</color>
+    <color name="upper_buttons.pressed">#8f8f8f</color>
+    <color name="operator_buttons">#f69906</color>
+    <color name="operator_buttons.pressed">#DD8A05</color>
+    <color name="number_buttons">#313131</color>
+    <color name="number_buttons.pressed">#2C2C2C</color>
+
+
+
+
+</resources>

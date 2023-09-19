@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
+       <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="Buttons_Style">
+        <item name="android:textSize">@dimen/buttton_text</item>
+    </style>
+    <style name="Buttons_Style.right" parent="Buttons_Style">
+        <item name="android:background">@drawable/circle</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Buttons_Style.numbers" parent="Buttons_Style">>
+        <item name="android:background">@drawable/circle_numbers</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Buttons_Style.number0" parent="Buttons_Style">>
+        <item name="android:background">@drawable/rounded</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Buttons_Style.operations" parent="Buttons_Style">>
+        <item name="android:background">@drawable/circle_operations</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

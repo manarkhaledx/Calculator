@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="PaddingLarge">24dp</dimen>
+    <dimen name="textNormal">16sp</dimen>
+    <dimen name="textGiant">48sp</dimen>
+    <dimen name="marginNormal">16dp</dimen>
+    <dimen name="margin_gaint">215dp</dimen>
+    <dimen name="buttton_text">20sp</dimen>
+
+</resources>

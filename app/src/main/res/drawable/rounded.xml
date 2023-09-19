@@ -1,0 +1,23 @@
+<!-- res/drawable/circle_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/number_buttons.pressed"/>
+            <corners android:radius="40dp"/>
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/number_buttons"/>
+            <corners android:radius="40dp"/>
+            <size
+                android:width="72dp"
+                android:height="72dp"/>
+        </shape>
+    </item>
+</selector>
