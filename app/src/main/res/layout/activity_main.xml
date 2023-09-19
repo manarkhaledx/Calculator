@@ -12,22 +12,23 @@
         android:id="@+id/result_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_gaint"
+        android:layout_marginTop="@dimen/_170sdp"
         android:gravity="end"
         android:maxLength="13"
-        android:text="@string/_0"
+        tools:text="@string/_0"
         android:textColor="@color/white"
-        android:textSize="@dimen/textGiant"
-        android:textIsSelectable="true"
         android:textColorHighlight="#65FFAA00"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textIsSelectable="true"
+        android:textSize="@dimen/textGiant"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="24dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plus_btn"
         style="@style/Buttons_Style.operations"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
         android:text="@string/plus"
         android:textSize="@dimen/buttton_text"
@@ -35,7 +36,8 @@
         app:layout_constraintEnd_toStartOf="@+id/minus_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/result_tv"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/divided_btn"
@@ -46,10 +48,13 @@
         android:text="@string/divided"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/c_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/multi_btn"
-        app:layout_constraintTop_toTopOf="@+id/plus_btn" />
+        app:layout_constraintTop_toTopOf="@+id/plus_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reminder_btn"
@@ -60,10 +65,12 @@
         android:text="@string/reminder"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/equal_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no3_btn"
-        app:layout_constraintTop_toTopOf="@+id/no1_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no1_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/equal_btn"
@@ -74,17 +81,19 @@
         android:text="@string/equal"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/dot_btn"
-        app:layout_constraintTop_toTopOf="@+id/no0_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no0_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no1_btn"
         style="@style/Buttons_Style.numbers"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
         android:text="@string/_1"
         android:textSize="@dimen/buttton_text"
@@ -100,7 +109,7 @@
         style="@style/Buttons_Style.numbers"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
         android:onClick="onClickNumber"
         android:text="@string/_4"
@@ -120,10 +129,12 @@
         android:text="@string/multiplication"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/no9_btn"
         app:layout_constraintEnd_toStartOf="@+id/divided_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/minus_btn"
         app:layout_constraintTop_toTopOf="@+id/plus_btn"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -132,14 +143,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
+        android:onClick="onClickNumber"
         android:text="@string/_5"
         android:textSize="@dimen/buttton_text"
-        android:onClick="onClickNumber"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/no2_btn"
         app:layout_constraintEnd_toStartOf="@+id/no6_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no4_btn"
-        app:layout_constraintTop_toTopOf="@+id/no4_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no4_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/dot_btn"
@@ -147,14 +160,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
+        android:onClick="onClickNumber"
         android:text="@string/dot"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
-        android:onClick="onClickNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/equal_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no0_btn"
-        app:layout_constraintTop_toTopOf="@+id/no0_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no0_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no8_btn"
@@ -162,21 +177,23 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
-        android:text="@string/_8"
         android:onClick="onClickNumber"
+        android:text="@string/_8"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/no5_btn"
         app:layout_constraintEnd_toStartOf="@+id/no9_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no7_btn"
-        app:layout_constraintTop_toTopOf="@+id/no7_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no7_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no7_btn"
         style="@style/Buttons_Style.numbers"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
         android:text="@string/_7"
         android:onClick="onClickNumber"
@@ -196,10 +213,12 @@
         android:text="@string/c"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/backspce_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no9_btn"
-        app:layout_constraintTop_toTopOf="@+id/no7_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no7_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no9_btn"
@@ -207,14 +226,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
-        android:text="@string/_9"
         android:onClick="onClickNumber"
+        android:text="@string/_9"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/no6_btn"
         app:layout_constraintEnd_toStartOf="@+id/c_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no8_btn"
-        app:layout_constraintTop_toTopOf="@+id/no7_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no7_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/backspce_btn"
@@ -222,29 +243,35 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
+        android:src="@drawable/baseline_arrow_back_space"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
-        android:src="@drawable/baseline_arrow_back_space"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no6_btn"
-        app:layout_constraintTop_toTopOf="@+id/no4_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no4_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no0_btn"
         style="@style/Buttons_Style.number0"
         android:layout_width="174dp"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
         android:onClick="onClickNumber"
         android:text="@string/_0"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dot_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/no1_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/no1_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no6_btn"
@@ -252,14 +279,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
+        android:onClick="onClickNumber"
         android:text="@string/_6"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
-        android:onClick="onClickNumber"
+        app:layout_constraintBottom_toTopOf="@+id/no3_btn"
         app:layout_constraintEnd_toStartOf="@+id/backspce_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no5_btn"
-        app:layout_constraintTop_toTopOf="@+id/no4_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no4_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no3_btn"
@@ -267,14 +296,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
-        android:text="@string/_3"
         android:onClick="onClickNumber"
+        android:text="@string/_3"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/dot_btn"
         app:layout_constraintEnd_toStartOf="@+id/reminder_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no2_btn"
-        app:layout_constraintTop_toTopOf="@+id/no1_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no1_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no2_btn"
@@ -282,14 +313,16 @@
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:gravity="center"
+        android:onClick="onClickNumber"
         android:text="@string/_2"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
-        android:onClick="onClickNumber"
+        app:layout_constraintBottom_toTopOf="@+id/no0_btn"
         app:layout_constraintEnd_toStartOf="@+id/no3_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/no1_btn"
-        app:layout_constraintTop_toTopOf="@+id/no1_btn" />
+        app:layout_constraintTop_toTopOf="@+id/no1_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/minus_btn"
@@ -300,9 +333,12 @@
         android:text="@string/minus"
         android:textSize="@dimen/buttton_text"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/no8_btn"
         app:layout_constraintEnd_toStartOf="@+id/multi_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/plus_btn"
-        app:layout_constraintTop_toTopOf="@+id/plus_btn" />
+        app:layout_constraintTop_toTopOf="@+id/plus_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

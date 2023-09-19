@@ -3,6 +3,7 @@ package com.example.calculator
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityMainBinding
 import kotlin.math.absoluteValue
@@ -87,6 +88,7 @@ class MainActivity : AppCompatActivity() {
             return formatOutput(result)
 
     }
+
     private fun formatOutput(value: Double): Any {
         val threshold = 1e10
         return if (value.absoluteValue >= threshold) {
@@ -102,10 +104,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun prepareOperation(operation: Operation) {
-        lastNum = binding.resultTv.text.toString().toDouble()
+        val inputText = binding.resultTv.text.toString()
+
+        if (inputText.isEmpty()) {
+            Toast.makeText(this, "Please enter a number first", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        lastNum = inputText.toDouble()
         clearInput()
         currentOperation = operation
     }
+
+
 
     private fun clearInput() {
         binding.resultTv.text = ""
