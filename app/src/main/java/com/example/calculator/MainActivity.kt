@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         binding.dotBtn.setOnClickListener {
             onClickNumber(it)
         }
+        binding.reminderBtn.setOnClickListener {
+            prepareOperation(Operation.Rem)
+        }
+
         binding.cBtn.setOnClickListener {
             clearInput()
         }
@@ -47,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             removeLastDigit()
         }
     }
+
 
     private fun removeLastDigit() {
         val inputText = binding.resultTv.text.toString()
@@ -75,6 +80,7 @@ class MainActivity : AppCompatActivity() {
                 Operation.Minus -> lastNum - secNum
                 Operation.Multi -> lastNum * secNum
                 Operation.Div -> lastNum / secNum
+                Operation.Rem -> lastNum % secNum
                 else -> secNum
             }
             currentOperation = null
