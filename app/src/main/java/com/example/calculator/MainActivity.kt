@@ -72,9 +72,24 @@ class MainActivity : AppCompatActivity() {
 
             val secNum = inputText.toDouble()
 
-            if (currentOperation == Operation.Div && secNum == 0.0) {
-                return "can't divide by zero"
-            }
+        if (currentOperation == Operation.Div && secNum == 0.0) {
+            Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
+            clearInput()
+            currentOperation = null;
+            return formatOutput(0.0)
+
+        }else if (currentOperation == Operation.Rem && secNum == 0.0) {
+            Toast.makeText(
+                this,
+                "Can't calculate rem with a divisor of zero",
+                Toast.LENGTH_SHORT
+            ).show()
+            clearInput()
+            currentOperation = null;
+            return formatOutput(0.0)
+        }
+
+
 
             val result = when (currentOperation) {
                 Operation.Plus -> lastNum + secNum
