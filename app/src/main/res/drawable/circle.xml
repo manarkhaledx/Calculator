@@ -5,8 +5,8 @@
         <shape android:shape="oval">
             <solid android:color="@color/upper_buttons.pressed" />
             <size
-                android:width="120dp"
-                android:height="120dp"/>
+                android:width="@dimen/_100sdp"
+                android:height="@dimen/_100sdp"/>
         </shape>
     </item>
     <!-- Default state -->
@@ -14,8 +14,8 @@
         <shape android:shape="oval">
             <solid android:color="@color/upper_buttons" />
             <size
-                android:width="72dp"
-                android:height="72dp"/>
+                android:width="@dimen/_42sdp"
+                android:height="@dimen/_42sdp"/>
         </shape>
     </item>
 </selector>

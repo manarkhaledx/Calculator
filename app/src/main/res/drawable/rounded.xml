@@ -6,8 +6,8 @@
             <solid android:color="@color/number_buttons.pressed"/>
             <corners android:radius="40dp"/>
             <size
-                android:width="120dp"
-                android:height="120dp"/>
+                android:width="@dimen/_100sdp"
+                android:height="@dimen/_100sdp"/>
         </shape>
     </item>
     <!-- Default state -->
@@ -16,8 +16,8 @@
             <solid android:color="@color/number_buttons"/>
             <corners android:radius="40dp"/>
             <size
-                android:width="72dp"
-                android:height="72dp"/>
+                android:width="@dimen/_42sdp"
+                android:height="@dimen/_42sdp"/>
         </shape>
     </item>
 </selector>

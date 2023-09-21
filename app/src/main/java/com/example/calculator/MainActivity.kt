@@ -13,15 +13,14 @@ class MainActivity : AppCompatActivity() {
     private var currentOperation: Operation? = null
     private lateinit var binding: ActivityMainBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        addCallBacks()
+        addCallbacks()
     }
 
-    private fun addCallBacks() {
+    private fun addCallbacks() {
         binding.dotBtn.setOnClickListener {
             onClickNumber(it)
         }
@@ -53,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun removeLastDigit() {
         val inputText = binding.resultTv.text.toString()
         if (inputText.isNotEmpty()) {
@@ -69,39 +67,34 @@ class MainActivity : AppCompatActivity() {
             return formatOutput(lastNum)
         }
 
-
-            val secNum = inputText.toDouble()
+        val secNum = inputText.toDouble()
 
         if (currentOperation == Operation.Div && secNum == 0.0) {
             Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
             clearInput()
-            currentOperation = null;
+            currentOperation = null
             return formatOutput(0.0)
-
-        }else if (currentOperation == Operation.Rem && secNum == 0.0) {
+        } else if (currentOperation == Operation.Rem && secNum == 0.0) {
             Toast.makeText(
                 this,
                 "Can't calculate rem with a divisor of zero",
                 Toast.LENGTH_SHORT
             ).show()
             clearInput()
-            currentOperation = null;
+            currentOperation = null
             return formatOutput(0.0)
         }
 
-
-
-            val result = when (currentOperation) {
-                Operation.Plus -> lastNum + secNum
-                Operation.Minus -> lastNum - secNum
-                Operation.Multi -> lastNum * secNum
-                Operation.Div -> lastNum / secNum
-                Operation.Rem -> lastNum % secNum
-                else -> secNum
-            }
-            currentOperation = null
-            return formatOutput(result)
-
+        val result = when (currentOperation) {
+            Operation.Plus -> lastNum + secNum
+            Operation.Minus -> lastNum - secNum
+            Operation.Multi -> lastNum * secNum
+            Operation.Div -> lastNum / secNum
+            Operation.Rem -> lastNum % secNum
+            else -> secNum
+        }
+        currentOperation = null
+        return formatOutput(result)
     }
 
     private fun formatOutput(value: Double): Any {
@@ -112,7 +105,6 @@ class MainActivity : AppCompatActivity() {
             if (value.isInt() || value == 0.0) value.toInt() else value
         }
     }
-
 
     private fun Double.isInt(): Boolean {
         return this == this.toInt().toDouble()
@@ -131,8 +123,6 @@ class MainActivity : AppCompatActivity() {
         currentOperation = operation
     }
 
-
-
     private fun clearInput() {
         binding.resultTv.text = ""
     }
@@ -140,7 +130,8 @@ class MainActivity : AppCompatActivity() {
     fun onClickNumber(v: View) {
         val newDigit = when (v) {
             binding.dotBtn -> "."
-            else -> (v as Button).text.toString()
+            is Button -> v.text?.toString() ?: ""
+            else -> ""
         }
         val oldDigit = binding.resultTv.text.toString()
         val containsDot = oldDigit.contains(".")
